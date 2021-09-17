@@ -1,0 +1,93 @@
+absl-py==0.13.0
+aiofiles @ file:///home/kevin/.cache/pypoetry/artifacts/51/db/6b/875780db21d7aa4a6c00d50bb6a95d1c550465c82d243d811f46c9b805/aiofiles-0.5.0-py3-none-any.whl
+aniso8601 @ file:///home/kevin/.cache/pypoetry/artifacts/0a/9c/92/82a6aa47d71fa536cee866513d0fc26da7dfbda587e6348c63bd770641/aniso8601-7.0.0-py2.py3-none-any.whl
+antlr4-python3-runtime==4.8
+appdirs==1.4.4
+async-exit-stack @ file:///home/kevin/.cache/pypoetry/artifacts/2c/26/5c/a9145342a3550850ddc7e6e440262691b3ea6f996ff19f6b6c2f8d7f86/async_exit_stack-1.0.1-py3-none-any.whl
+async-generator @ file:///home/kevin/.cache/pypoetry/artifacts/60/d6/35/e25389ca9cdf584a7a41be4eab45a490150210296ca82c7eb696a7e21b/async_generator-1.10-py3-none-any.whl
+attrs @ file:///home/kevin/.cache/pypoetry/artifacts/1a/aa/39/10d6d07084f186f8cf6963cb033440402ad5088bb94d712239170f2ef6/attrs-21.2.0-py2.py3-none-any.whl
+black==21.4b2
+cachetools==4.2.2
+certifi @ file:///home/kevin/.cache/pypoetry/artifacts/c4/85/84/f095fd90533096a81def971743d14081337c62ded3cddd449e8774e3e8/certifi-2021.5.30-py2.py3-none-any.whl
+charset-normalizer @ file:///home/kevin/.cache/pypoetry/artifacts/83/43/9c/7775ce3f54c83997d39feab23451f9f9cef9aa2f5f88368aba882a56d6/charset_normalizer-2.0.5-py3-none-any.whl
+click @ file:///home/kevin/.cache/pypoetry/artifacts/30/bc/bf/e00ffd8f0edf0294942e70e80e42a839bd2649d2c5b864e6389e526d2a/click-7.1.2-py2.py3-none-any.whl
+cloudpickle==2.0.0
+cycler==0.10.0
+Cython==0.29.24
+detectron2 @ git+https://github.com/facebookresearch/detectron2.git@ce5b1c5afe93919d14adf0fef27d608300a5171e
+dnspython @ file:///home/kevin/.cache/pypoetry/artifacts/21/6b/47/ef4d2da2e3efaa0e9a8338689acf4c2fb05b726cc4774de873baa57265/dnspython-2.1.0-py3-none-any.whl
+email-validator @ file:///home/kevin/.cache/pypoetry/artifacts/0a/33/4e/21841a05c81e20a58ba8f5291baa54daabf8248d6d9518e93673c4f8c2/email_validator-1.1.3-py2.py3-none-any.whl
+fastapi @ file:///home/kevin/.cache/pypoetry/artifacts/cc/be/ee/6c45d8b1d39587223779c08a07205daeed8e257468622f8475f21c6d11/fastapi-0.68.1-py3-none-any.whl
+future==0.18.2
+fvcore==0.1.5.post20210915
+google-auth==1.35.0
+google-auth-oauthlib==0.4.6
+graphene @ file:///home/kevin/.cache/pypoetry/artifacts/13/9e/df/e9c90333b8d4ed8236eb3696fa6496426462504a99051605e464b65c33/graphene-2.1.9-py2.py3-none-any.whl
+graphql-core @ file:///home/kevin/.cache/pypoetry/artifacts/a5/84/fa/12b8e97a51b0decd7b77a0c2846fa936a17ea2a7f93f50af7ea1151fdf/graphql_core-2.3.2-py2.py3-none-any.whl
+graphql-relay @ file:///home/kevin/.cache/pypoetry/artifacts/bb/3d/a6/201a818409609e031dfe0a94b92ab59d8352cfac8f593a08b6646dff1e/graphql_relay-2.0.1-py3-none-any.whl
+grpcio==1.40.0
+h11 @ file:///home/kevin/.cache/pypoetry/artifacts/6f/50/9d/65e5b4940425051d03fab25052973dcf80bbe2f00676b117d40996e468/h11-0.12.0-py3-none-any.whl
+httptools @ file:///home/kevin/.cache/pypoetry/artifacts/d2/56/d3/07443cdd7afce0527f86a6887395451c0217033a16ea61668a3a2718ce/httptools-0.1.2-cp38-cp38-manylinux1_x86_64.whl
+hydra-core==1.1.1
+idna @ file:///home/kevin/.cache/pypoetry/artifacts/a5/7d/f0/56f2a34c99da4534f97d70ca8ce7eace4ad5581a10938c3be412783add/idna-3.2-py3-none-any.whl
+importlib-resources==5.2.2
+iopath==0.1.9
+itsdangerous @ file:///home/kevin/.cache/pypoetry/artifacts/ed/be/b7/3afa53339fde1838049443e48288a0348e1c636069b0c90f199510d48a/itsdangerous-1.1.0-py2.py3-none-any.whl
+Jinja2 @ file:///home/kevin/.cache/pypoetry/artifacts/1e/19/63/9b4675e143abad59de60e0e667815fd5e19dd0b28fc2815f9f957726d3/Jinja2-2.11.3-py2.py3-none-any.whl
+kiwisolver==1.3.2
+Markdown==3.3.4
+MarkupSafe @ file:///home/kevin/.cache/pypoetry/artifacts/11/6e/95/f2f04f7850f90b0ebc7410054662217e97d362ea6a688ad27994232123/MarkupSafe-2.0.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+matplotlib==3.4.3
+more-itertools @ file:///home/kevin/.cache/pypoetry/artifacts/45/36/21/c60375cd1bec9b9836e9e5e0fcc6020b73f5edf39038d6cc93a60c180a/more_itertools-8.9.0-py3-none-any.whl
+mypy-extensions==0.4.3
+numpy @ file:///home/kevin/.cache/pypoetry/artifacts/85/83/49/a1815a60257e3b8e2934c737e542f3b531690042828aa93ee8e986d5e3/numpy-1.21.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+oauthlib==3.1.1
+omegaconf==2.1.1
+opencv-python @ file:///home/kevin/.cache/pypoetry/artifacts/3b/d8/df/0a59c3b262c894575902b2b92144ab97d0deb757dd623159999ddb5db0/opencv_python-4.5.3.56-cp38-cp38-manylinux2014_x86_64.whl
+orjson @ file:///home/kevin/.cache/pypoetry/artifacts/b4/d2/5b/21c3966e42c05a62ce19992af02e3127bec8b40b5caeeeb4e6ab458167/orjson-3.6.3-cp38-cp38-manylinux_2_24_x86_64.whl
+packaging @ file:///home/kevin/.cache/pypoetry/artifacts/6e/de/e5/e3e7e60b359c616435089a1dd11b101dc553fae21fca74bbe98d0c323e/packaging-21.0-py3-none-any.whl
+pathspec==0.9.0
+Pillow==8.3.2
+pluggy @ file:///home/kevin/.cache/pypoetry/artifacts/9c/e5/0b/2d64d03361a081edeb5d2ec5f286ccf9719587781fbf6822e1b6384c27/pluggy-0.13.1-py2.py3-none-any.whl
+portalocker==2.3.2
+promise @ file:///home/kevin/.cache/pypoetry/artifacts/0f/4f/91/54827555a9ce3597aca6d8a5ca3066e4cbdeb55dfc09e7dd69e113cec7/promise-2.3.tar.gz
+protobuf==3.18.0
+py @ file:///home/kevin/.cache/pypoetry/artifacts/6b/b2/2b/e6686e7d0183dbd36bd66921efa3e77ce26260a3671524cd86614290e0/py-1.10.0-py2.py3-none-any.whl
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycocotools==2.0.2
+pydantic @ file:///home/kevin/.cache/pypoetry/artifacts/97/5a/97/6d56f653b6eb23c25fe8bd938764b95b9ddae8d8bcb08fb129df79f752/pydantic-1.8.2-cp38-cp38-manylinux2014_x86_64.whl
+pydot==1.4.2
+pyparsing @ file:///home/kevin/.cache/pypoetry/artifacts/da/e7/3d/1780282f558e5fd157bf708b28b8ba0d08323ef6bc5b6396139ce38a0b/pyparsing-2.4.7-py2.py3-none-any.whl
+pytest @ file:///home/kevin/.cache/pypoetry/artifacts/9d/40/6b/50d2cb06df545acea43c65379c5456f4fbc703115a703bc7cd433ddf70/pytest-5.4.3-py3-none-any.whl
+python-dateutil==2.8.2
+python-dotenv @ file:///home/kevin/.cache/pypoetry/artifacts/77/4d/7f/4caf9eb43e9f70ce775535038be296b37b62fdfc0e7435d3af99dd3a3c/python_dotenv-0.19.0-py2.py3-none-any.whl
+python-multipart @ file:///home/kevin/.cache/pypoetry/artifacts/34/1a/77/57e28cd2dc00bc0ec60258333cd5a23b5fffc3cd38f9c6eae0fba81c17/python-multipart-0.0.5.tar.gz
+PyYAML @ file:///home/kevin/.cache/pypoetry/artifacts/f7/d9/62/83fb890c5915cc3c7a919097a61e93e54d7a3c47832b2f91e38224359d/PyYAML-5.4.1-cp38-cp38-manylinux1_x86_64.whl
+regex==2021.8.28
+requests @ file:///home/kevin/.cache/pypoetry/artifacts/97/12/e1/3c2e2b7f315a912e2da1b1465a23c3f14d51a3bd4696e14e0f2796adde/requests-2.26.0-py2.py3-none-any.whl
+requests-oauthlib==1.3.0
+rsa==4.7.2
+Rx @ file:///home/kevin/.cache/pypoetry/artifacts/6a/c0/7f/d884f0dfc237072cc4cf7b7738abb4384f5e0de1db74cdab63c3e6c29b/Rx-1.6.1-py2.py3-none-any.whl
+six @ file:///home/kevin/.cache/pypoetry/artifacts/48/e6/04/8118155ae3ec3a16dd2a213bbf7a7d8a62c596b2e90f73a22c896269f1/six-1.16.0-py2.py3-none-any.whl
+starlette @ file:///home/kevin/.cache/pypoetry/artifacts/24/98/d5/27dc0660a651fef03b9f7a1eb252133d2c136058fc421d1794ac7c8604/starlette-0.14.2-py3-none-any.whl
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+termcolor==1.1.0
+toml==0.10.2
+torch @ file:///home/kevin/.cache/pypoetry/artifacts/ac/e2/4b/36eaa7e7f48590864972659dc7f242d1584ae5b2852600746ac88f679a/torch-1.9.0-cp38-cp38-manylinux1_x86_64.whl
+torchvision @ file:///home/kevin/.cache/pypoetry/artifacts/ac/61/4f/bf2df611648bf707fe2e486c7b47034696bb2bd6e497658fb58efd236b/torchvision-0.10.0-cp38-cp38-manylinux1_x86_64.whl
+tqdm==4.62.2
+typing-extensions @ file:///home/kevin/.cache/pypoetry/artifacts/63/00/66/294e7d75d34398c27c7ed9b154822f99422b0f11548b11c569c188eb2b/typing_extensions-3.10.0.2-py3-none-any.whl
+ujson @ file:///home/kevin/.cache/pypoetry/artifacts/2e/34/1f/d8256304b3e117a634f5fb2e4196fd88705c980c35e57fb4c68f1091fa/ujson-4.1.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl
+urllib3 @ file:///home/kevin/.cache/pypoetry/artifacts/26/0c/13/6d56b3040728f11222f4621ff0e3d8684bf3642a42452614400a5feaf2/urllib3-1.26.6-py2.py3-none-any.whl
+uvicorn @ file:///home/kevin/.cache/pypoetry/artifacts/1d/0a/24/4866f58eb94ae161513ad8eb253f426f177c3695de6305af006853f27d/uvicorn-0.13.4-py3-none-any.whl
+uvloop @ file:///home/kevin/.cache/pypoetry/artifacts/54/e0/de/84a2b77de9e7cf6c39856123ddd5442b58380c898496505c0a4476904e/uvloop-0.16.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+watchgod @ file:///home/kevin/.cache/pypoetry/artifacts/6c/6a/26/d4250285a3207b6e31b03cafa7b8fa8d0859175a65ef243b8373c8a40f/watchgod-0.7-py3-none-any.whl
+wcwidth @ file:///home/kevin/.cache/pypoetry/artifacts/36/68/e2/7232f431072d5e8aeec124120b9a1d095d45da10311d271fac10982473/wcwidth-0.2.5-py2.py3-none-any.whl
+websockets @ file:///home/kevin/.cache/pypoetry/artifacts/3c/0a/a3/4b19b23c5814895b643c690c364bd177b1d240f187657a32ffdc9f9e84/websockets-8.1-cp38-cp38-manylinux2010_x86_64.whl
+Werkzeug==2.0.1
+yacs==0.1.8
+zipp==3.5.0

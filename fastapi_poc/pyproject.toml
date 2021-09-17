@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "fastapi_poc"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = {extras = ["all"], version = "^0.68.1"}
+torch = "1.9.0"
+opencv-python = "^4.5.3"
+torchvision = "^0.10.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
