@@ -136,8 +136,10 @@ class Detectron2Model:
 @app.get("/run_model")
 def run_model():
     FILEPATH = "/home/kevin/git/kevin_scratch/fastapi_poc/fastapi_poc"
+    #FILEPATH = "/home/appuser"
     #image_file = f"{FILEPATH}/Well_B2_Ch1_1um.tiff"
-    image_file = f"{FILEPATH}/Well_B2_Xmm-0.012_Ymm-0.018_Ch1_1um.tiff"
+    image_file = f"{FILEPATH}/Well_B2_Xmm-0.012_Ymm-0.018_Ch1_1um-0000-0000-0512x0512.tif"
+    #image_file = f"{FILEPATH}/Well_B2_Xmm-0.012_Ymm-0.018_Ch1_1um.tiff"
     model_file = f"{FILEPATH}/wbq_organoid_model_02Sep2021.pth"
     results = Detectron2Model(model_file, image_file)
     return {"data": results._mask_data, "type": "detectron2"}
