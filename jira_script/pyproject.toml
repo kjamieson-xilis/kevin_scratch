@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "jira-script"
+version = "0.1.0"
+description = ""
+authors = ["Kevin Jamieson <kevin.jamieson@xilis.net>"]
+readme = "README.md"
+packages = [{include = "jira_script"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+jira = "^3.1.1"
+rich = "^11.2.0"
+click = "^8.0.4"
+blessed = "^1.19.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
