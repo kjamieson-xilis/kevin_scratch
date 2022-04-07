@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hera-example"
+version = "0.1.0"
+description = ""
+authors = ["Kevin Jamieson <kevin.jamieson@xilis.net>"]
+readme = "README.md"
+packages = [{include = "hera_example"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+hera-workflows = "^2.6.0"
+kubernetes = "^23.3.0"
+boto3 = "^1.21.31"
+fs = "^2.4.15"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
