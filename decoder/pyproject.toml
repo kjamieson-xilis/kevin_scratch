@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "decoder"
+version = "0.1.0"
+description = ""
+authors = ["Kevin Jamieson <kevin.jamieson@xilis.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+mysql-connector-python = "^8.0.28"
+openpyxl = "^3.0.9"
+pandas = "^1.4.1"
+xlrd = "^2.0.1"
+psycopg2-binary = "^2.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

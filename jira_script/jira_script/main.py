@@ -5,6 +5,7 @@ import click
 import jira
 from rich.console import Console
 from rich.table import Table
+from rich.style import Style
 
 import webbrowser
 PP = pprint.PrettyPrinter(indent=2)
@@ -18,18 +19,45 @@ password <API TOKEN STRING>
 """
 OPTIONS = {'server': 'https://xilis.atlassian.net'}
 SES_BOARD = 8
+PROJECT = 'SES'
+USERNAME = 'kevin.jamieson@xilis.net'
 
+DONE_ROW = Style(strike=True)
 
 def get_active_sprint(board_id):
     gh = jira.client.GreenHopper(OPTIONS)
     sprints = gh.sprints(board_id)
-    print(sprints)
-    active_sprint = [x for x in sprints if x.state == 'ACTIVE']
+    active_sprint = [x for x in sprints if x.state == 'active']
     if active_sprint:
         return active_sprint[0]
     else:
         return None
 
+def move_issue(issue_id):
+    j = jira.JIRA(OPTIONS)
+    issue = j.issue(issue_id)
+    print(f'{issue_id} CURRENT STATUS: {issue.fields.status}')
+    available_transitions = j.transitions(issue_id)
+    print(f'Available Transitions:')
+    for index, t in enumerate(available_transitions):
+        print(f"{index}. - {t['name']}")
+    choice = input('Choice? ')
+    try:
+        transition = available_transitions[int(choice)]
+        result = j.transition_issue(issue, transition['id'])
+    except Exception:
+        print('Invalid selection, aborting')
+
+def get_issue_comments(issue_id):
+    j = jira.JIRA(OPTIONS)
+    comments = j.comments(issue_id)
+    return comments
+
+def get_sprint_issues(sprint_id):
+    j = jira.JIRA(OPTIONS)
+    JQL = f'sprint = {sprint_id} and assignee in (currentUser())'
+    results = j.search_issues(JQL, expand="Names")
+    return [x for x in results]
 
 def get_tickets():
     j = jira.JIRA(OPTIONS)
@@ -40,23 +68,35 @@ def get_tickets():
             infra_tickets.append(entry)
     return infra_tickets
 
-def show_tickets():
-    infra = get_tickets()
-    console = Console()
-    atp_table = Table(show_header=True, header_style="bold magenta")
-    atp_table.add_column("Key")
-    atp_table.add_column("Summary")
-    atp_table.add_column("Status")
-    atp_table.add_column("Priority")
-    atp_table.add_column("Sprint")
+def add_comment(issue_id, comment_text):
+    j = jira.JIRA(OPTIONS)
+    j.add_comment(issue_id, comment_text)
 
+def show_comments(ticket_id):
+    comments = get_issue_comments(ticket_id)
+    console = Console()
+    infra_table = Table(show_header=True, header_style="bold green")
+    infra_table.add_column("Date")
+    infra_table.add_column("Author")
+    infra_table.add_column("Comment")
+    for comment in comments:
+        infra_table.add_row(comment.created, comment.author.displayName, comment.body)
+    console.print(infra_table)
+
+
+def show_tickets(ticket_list):
+    infra = ticket_list
+    console = Console()
     infra_table = Table(show_header=True, header_style="bold green")
     infra_table.add_column("Key")
     infra_table.add_column("Summary")
     infra_table.add_column("Status")
     infra_table.add_column("Priority")
     for x in infra:
-        infra_table.add_row(x.key, x.fields.summary, x.fields.status.name, x.fields.priority.name)
+        style = None
+        if x.fields.status.name == 'DONE':
+            style = DONE_ROW
+        infra_table.add_row(x.key, x.fields.summary, x.fields.status.name, x.fields.priority.name, style=style)
 
     console.print(infra_table)
 
@@ -95,20 +135,52 @@ def main():
 @click.option('--b/--no-b', default=False)
 @click.pass_context
 def cli(ctx, b):
+    """Show current sprint tickets, pass --b to show backlog"""
     if ctx.invoked_subcommand is None:
         if b:
-            show_tickets()
+            show_tickets(get_tickets())
         else:
-            print(get_active_sprint(SES_BOARD))
+            active_sprint = get_active_sprint(SES_BOARD)
+            show_tickets(get_sprint_issues(active_sprint.id))
 
-            print("only sprint")
+@cli.command()
+@click.argument('issue_id')
+@click.option('--a')
+def c(issue_id, a):
+    """Show comments on issue"""
+    if a:
+        add_comment(issue_id, a)
+    show_comments(issue_id)
+
+@cli.command()
+@click.argument('issue_id')
+def m(issue_id):
+    """Move (transition) issue status"""
+    move_issue(issue_id)
+
+@cli.command()
+def n():
+    """Create new issue."""
+    j = jira.JIRA(OPTIONS)
+    issue_type_fullname = {'b': 'Bug', 't': 'Task', 's': 'Story'}
+    issue_type = input("Type? t=Task, b=Bug, s=Story ").lower()
+    add_to_sprint = input("Add to current sprint? y/n: ").lower()
+    print(f"Creating issue type {issue_type_fullname[issue_type]}")
+    summary = input("Summary: ")
+    description = input("Description: ")
+    new_issue = j.create_issue(project=PROJECT, summary=summary, description=description, issuetype={'name': issue_type_fullname[issue_type]})
+    j.assign_issue(new_issue, USERNAME)
+    print(f"New issue created, {new_issue}")
+    if add_to_sprint == 'y':
+        active_sprint = get_active_sprint(SES_BOARD)
+        j.add_issues_to_sprint(sprint_id=active_sprint.id, issue_keys=[new_issue.key])
+
 
 @cli.command()
 @click.argument('issue_id')
 def o(issue_id):
-    """Open the issue id"""
-    webbrowser.open_new(f"https://xilis.atlassian.net/browse/SES-{issue_id}")
+    """Open the issue id in a web browser"""
+    webbrowser.open_new(f"https://xilis.atlassian.net/browse/{issue_id}")
 
 if __name__ == '__main__':
     cli()
-

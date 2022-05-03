@@ -1,0 +1,32 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/Users/kevin/git/kevin_scratch/jira_script/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20211017.0/
+DONE_ROW	jira_script/main.py	/^DONE_ROW = Style(strike=True)$/;"	v
+OPTIONS	jira_script/main.py	/^OPTIONS = {'server': 'https:\/\/xilis.atlassian.net'}$/;"	v
+PP	jira_script/main.py	/^PP = pprint.PrettyPrinter(indent=2)$/;"	v
+PROJECT	jira_script/main.py	/^PROJECT = 'SES'$/;"	v
+SES_BOARD	jira_script/main.py	/^SES_BOARD = 8$/;"	v
+USERNAME	jira_script/main.py	/^USERNAME = 'kevin.jamieson@xilis.net'$/;"	v
+add_comment	jira_script/main.py	/^def add_comment(issue_id, comment_text):$/;"	f
+c	jira_script/main.py	/^def c(issue_id, a):$/;"	f
+cli	jira_script/main.py	/^def cli(ctx, b):$/;"	f
+get_active_sprint	jira_script/main.py	/^def get_active_sprint(board_id):$/;"	f
+get_issue_comments	jira_script/main.py	/^def get_issue_comments(issue_id):$/;"	f
+get_sprint_issues	jira_script/main.py	/^def get_sprint_issues(sprint_id):$/;"	f
+get_tickets	jira_script/main.py	/^def get_tickets():$/;"	f
+m	jira_script/main.py	/^def m(issue_id):$/;"	f
+main	jira_script/main.py	/^def main():$/;"	f
+move_issue	jira_script/main.py	/^def move_issue(issue_id):$/;"	f
+n	jira_script/main.py	/^def n():$/;"	f
+o	jira_script/main.py	/^def o(issue_id):$/;"	f
+render	jira_script/main.py	/^def render(term, data, idx):$/;"	f
+show_comments	jira_script/main.py	/^def show_comments(ticket_id):$/;"	f
+show_tickets	jira_script/main.py	/^def show_tickets(ticket_list):$/;"	f

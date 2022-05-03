@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "kubeview"
+version = "0.1.0"
+description = ""
+authors = ["Kevin Jamieson <kevin.jamieson@xilis.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+kubernetes = "^23.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
