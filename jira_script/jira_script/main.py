@@ -48,6 +48,11 @@ def move_issue(issue_id):
     except Exception:
         print('Invalid selection, aborting')
 
+def get_issue_description(issue_id):
+    j = jira.JIRA(OPTIONS)
+    desc = j.issue(issue_id).fields.description
+    return desc
+
 def get_issue_comments(issue_id):
     j = jira.JIRA(OPTIONS)
     comments = j.comments(issue_id)
@@ -73,8 +78,14 @@ def add_comment(issue_id, comment_text):
     j.add_comment(issue_id, comment_text)
 
 def show_comments(ticket_id):
+    desc = get_issue_description(ticket_id)
     comments = get_issue_comments(ticket_id)
     console = Console()
+    desc_table = Table(show_header=True, header_style="bold yellow")
+    desc_table.add_column("Description")
+    desc_table.add_row(desc)
+    console.print(desc_table)
+
     infra_table = Table(show_header=True, header_style="bold green")
     infra_table.add_column("Date")
     infra_table.add_column("Author")
